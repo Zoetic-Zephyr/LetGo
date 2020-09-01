@@ -1,3 +1,5 @@
+// This ReactNative app is built with this tutorial: https://www.youtube.com/playlist?list=PLbkzKPzQTrTxbkPcxVqzw5y42Tzn2MMNV
+
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
