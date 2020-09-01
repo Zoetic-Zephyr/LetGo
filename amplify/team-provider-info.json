@@ -1,0 +1,20 @@
+{
+  "native": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-letgo-native-172540-authRole",
+      "UnauthRoleArn": "arn:aws:iam::962416814888:role/amplify-letgo-native-172540-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::962416814888:role/amplify-letgo-native-172540-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-letgo-native-172540-deployment",
+      "UnauthRoleName": "amplify-letgo-native-172540-unauthRole",
+      "StackName": "amplify-letgo-native-172540",
+      "StackId": "arn:aws:cloudformation:us-east-1:962416814888:stack/amplify-letgo-native-172540/b0e1f050-ec99-11ea-8f20-0af6b1cd0899",
+      "AmplifyAppId": "d2nmkzllsgzkwq"
+    },
+    "categories": {
+      "auth": {
+        "letgoac85db6e": {}
+      }
+    }
+  }
+}

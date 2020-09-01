@@ -1,0 +1,6 @@
+module Pods_LetGo_LetGoTests {
+  umbrella header "Pods-LetGo-LetGoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

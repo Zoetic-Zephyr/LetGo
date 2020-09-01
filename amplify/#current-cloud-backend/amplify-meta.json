@@ -1,0 +1,38 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-letgo-native-172540-authRole",
+      "UnauthRoleArn": "arn:aws:iam::962416814888:role/amplify-letgo-native-172540-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::962416814888:role/amplify-letgo-native-172540-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-letgo-native-172540-deployment",
+      "UnauthRoleName": "amplify-letgo-native-172540-unauthRole",
+      "StackName": "amplify-letgo-native-172540",
+      "StackId": "arn:aws:cloudformation:us-east-1:962416814888:stack/amplify-letgo-native-172540/b0e1f050-ec99-11ea-8f20-0af6b1cd0899",
+      "AmplifyAppId": "d2nmkzllsgzkwq"
+    }
+  },
+  "auth": {
+    "letgoac85db6e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-letgo-native-172540-deployment/amplify-cfn-templates/auth/letgoac85db6e-cloudformation-template.yml",
+        "logicalId": "authletgoac85db6e"
+      },
+      "lastPushTimeStamp": "2020-09-01T21:31:15.132Z",
+      "output": {
+        "AppClientSecret": "eefk46r237p94csbq35jos1lg6ig1evrlvlfpk574arrihbog70",
+        "UserPoolId": "us-east-1_y1Oh82Whf",
+        "AppClientIDWeb": "7k0ek4fctieihjr3t1pm7j70ht",
+        "AppClientID": "3ubjjetsqa099capnpucgln4fd",
+        "IdentityPoolId": "us-east-1:dd1b05d2-3f9d-4e4f-b1e5-2b3b4339be52",
+        "IdentityPoolName": "letgoac85db6e_identitypool_ac85db6e__native",
+        "UserPoolName": "letgoac85db6e_userpool_ac85db6e"
+      },
+      "lastPushDirHash": "HZv8Fumx4/U3k3xA9mElguVljww="
+    }
+  }
+}

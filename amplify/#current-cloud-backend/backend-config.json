@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "letgoac85db6e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
