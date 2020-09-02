@@ -117,6 +117,27 @@
 				}
 			}
 		},
+		"apiletgo": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/amplify-letgo-native-172540-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"Parameters": {
+					"CreateAPIKey": 0,
+					"AppSyncApiName": "letgo",
+					"DynamoDBBillingMode": "PAY_PER_REQUEST",
+					"DynamoDBEnableServerSideEncryption": false,
+					"AuthCognitoUserPoolId": {
+						"Fn::GetAtt": [
+							"authletgoac85db6e",
+							"Outputs.UserPoolId"
+						]
+					},
+					"S3DeploymentBucket": "amplify-letgo-native-172540-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/04a65dfa12361bccb5012094d64cd95e744fea19",
+					"env": "native"
+				}
+			}
+		},
 		"UpdateRolesWithIDPFunction": {
 			"DependsOn": [
 				"AuthRole",

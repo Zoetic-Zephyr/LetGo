@@ -1,13 +1,12 @@
 // This ReactNative app is built with this tutorial: https://www.youtube.com/playlist?list=PLbkzKPzQTrTxbkPcxVqzw5y42Tzn2MMNV
 
-import React from "react";
+import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-import Amplify from "aws-amplify";
-import awsconfig from "./aws-exports";
 import { Authenticator } from "aws-amplify-react-native";
 
-Amplify.configure(awsconfig);
+import { API, graphqlOperation } from "aws-amplify";
+import { listTalks } from "./src/graphql/queries";
 
 console.disableYellowBox = true;
 
@@ -16,15 +15,37 @@ function Home(props) {
   else return <></>;
 }
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Authenticator usernameAttributes="email">
-        <Home />
-      </Authenticator>
-    </View>
-  );
+type Props = {};
+export default class App extends Component<Props> {
+  state = { talks: [] };
+  async componentDidMount() {
+    const talkData = await API.graphql(graphqlOperation(listTalks));
+    this.setState({ talks: talkData.data.listTalks.items });
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Authenticator usernameAttributes="email">
+          {/* <Home /> */}
+          {this.state.talks.map((b, i) => (
+            <Text key={i}>{b.name}</Text>
+          ))}
+        </Authenticator>
+      </View>
+    );
+  }
 }
+
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Authenticator usernameAttributes="email">
+//         <Home />
+//       </Authenticator>
+//     </View>
+//   );
+// }
 
 const styles = StyleSheet.create({
   container: {

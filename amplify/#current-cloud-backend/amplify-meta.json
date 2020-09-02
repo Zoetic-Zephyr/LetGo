@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-letgo-native-172540-deployment/amplify-cfn-templates/auth/letgoac85db6e-cloudformation-template.yml",
         "logicalId": "authletgoac85db6e"
       },
-      "lastPushTimeStamp": "2020-09-01T21:31:15.132Z",
+      "lastPushTimeStamp": "2020-09-02T01:08:44.118Z",
       "output": {
         "AppClientSecret": "eefk46r237p94csbq35jos1lg6ig1evrlvlfpk574arrihbog70",
         "UserPoolId": "us-east-1_y1Oh82Whf",
@@ -33,6 +33,31 @@
         "UserPoolName": "letgoac85db6e_userpool_ac85db6e"
       },
       "lastPushDirHash": "HZv8Fumx4/U3k3xA9mElguVljww="
+    }
+  },
+  "api": {
+    "letgo": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authletgoac85db6e"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "h4hp6eh7drfbpaued47jgpx7fa",
+        "GraphQLAPIEndpointOutput": "https://mno2xralxfe2xo7lccejvmwda4.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-letgo-native-172540-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiletgo"
+      },
+      "lastPushTimeStamp": "2020-09-02T01:08:45.320Z",
+      "lastPushDirHash": "D4DePeKcw04nZAgPsGmjHBS3EDE="
     }
   }
 }
